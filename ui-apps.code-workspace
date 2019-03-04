@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "first-react-app"
+		},
+		{
+			"path": "first-ui-app"
+		},
+		{
+			"path": "first-express-app"
+		}
+	],
+	"settings": {}
+}
