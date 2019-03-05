@@ -15,13 +15,13 @@ app.use('/api/items', itemsrouter);
 const appenv = process.env.NODE_ENV || 'local';
 dotenv.config({ path: `./.env.${appenv}` });
 
-const db = process.env.MONGO_URI || keys.mongoURI;
+const db = process.env.MONGO_URI;
 
 function log(message) {
     process.stdout.write(`${message}\n`);
 }
 
-const port = process.env.port || 5000;
+const port = process.env.port || keys.PORT;
 const server = http.createServer(app);
 
 function startServer() {
