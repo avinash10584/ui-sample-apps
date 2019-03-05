@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "first-express-app"
+		},
+		{
+			"path": "react-express-shopping-list"
 		}
 	],
 	"settings": {}
