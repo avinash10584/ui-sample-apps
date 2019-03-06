@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const http = require('http');
 const dotenv = require('dotenv');
+const path = require('path');
 const keys = require('./config/keys');
 
 const app = express();
@@ -12,8 +13,12 @@ const app = express();
 app.use(express.json());
 app.use('/api/items', itemsrouter);
 
-const appenv = process.env.NODE_ENV || 'local';
-dotenv.config({ path: `./.env.${appenv}` });
+
+const appenv = process.env.NODE_ENV || 'production';
+
+console.log(`Loading environment ${appenv}`);
+
+dotenv.config({ path: path.join(__dirname, 'config', `.env.${appenv}`) });
 
 const db = process.env.MONGO_URI;
 
@@ -61,7 +66,7 @@ startServer();
 
 // connect to db
 
-log(`Connection to .. ${db}`);
+log(`Connecting to .. ${db}`);
 
 mongoose
     .connect(db)
