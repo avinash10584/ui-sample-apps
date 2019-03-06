@@ -16,6 +16,8 @@ const config = {
         path: path.join(process.cwd(), 'dist'),
     },
     devServer: {
+        publicPath: "/",
+        contentBase: "./public",
         inline: true, // autorefresh
         port: 5005, // development port server
     },
