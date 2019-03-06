@@ -1,7 +1,7 @@
 const path = require('path');
 
 const config = {
-    mode: 'development',
+    mode: 'production',
     entry: {
         vendor: [
             path.resolve(process.cwd(), 'src', 'vendor', 'sample-vendor-file.js'),
@@ -15,10 +15,7 @@ const config = {
         filename: '[name].js',
         path: path.join(process.cwd(), 'dist'),
     },
-    devServer: {    
-        publicPath: "/",
-        contentBase: "./public",
-        hot: true,
+    devServer: {
         inline: true, // autorefresh
         port: 5005, // development port server
     },
