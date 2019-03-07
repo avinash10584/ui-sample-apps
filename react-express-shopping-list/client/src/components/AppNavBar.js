@@ -36,7 +36,7 @@ class AppNavBar extends Component {
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
                                     <NavLink href="http://www.bing.com">
-                                        Bing
+                                        TestLink
                             </NavLink>
                                 </NavItem>
                             </Nav>

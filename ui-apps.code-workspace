@@ -16,5 +16,12 @@
 			"path": "react-app-from-create-react-app"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.exclude": {
+			"**/.classpath": true,
+			"**/.project": true,
+			"**/.settings": true,
+			"**/.factorypath": true
+		}
+	}
 }
