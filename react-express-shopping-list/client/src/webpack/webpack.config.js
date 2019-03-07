@@ -29,7 +29,7 @@ const config = {
                 exclude: /node_modules/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['es2015', 'react'], // use es2015 and react
+                    presets: ['es2015', 'stage-0', 'react'], // use es2015 and react
                 },
             },
             {
