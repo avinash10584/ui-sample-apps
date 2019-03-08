@@ -1,7 +1,7 @@
 {
   "name": "react-express-shopping-list",
   "version": "1.0.0",
-  "description": "sample react app with express js mongoose",
+  "description": "MERN stack sample app wriiten on ES6, webpack",
   "scripts": {
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:server": "cd backend && npm start",
