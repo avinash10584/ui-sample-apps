@@ -48,4 +48,4 @@ class AppNavBar extends Component {
     }
 }
 
-export default AppNavBar
+export default AppNavBar;

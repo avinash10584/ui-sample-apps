@@ -7,7 +7,7 @@ const dotenv = require('dotenv');
 const path = require('path');
 const keys = require('./config/keys');
 
-const app = express()
+const app = express();
 
 // To read REST response body (alternative to body-parsers)
 app.use(express.json());
