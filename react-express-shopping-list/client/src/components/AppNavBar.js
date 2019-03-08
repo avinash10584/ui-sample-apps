@@ -16,7 +16,7 @@ class AppNavBar extends Component {
         this.state = {
             isOpen: false
         }
-        this.toggle = this.toggle.bind(this);
+        this.toggle = this.toggle.bind(this)
     }
 
     toggle() {
@@ -48,4 +48,4 @@ class AppNavBar extends Component {
     }
 }
 
-export default AppNavBar;
+export default AppNavBar
