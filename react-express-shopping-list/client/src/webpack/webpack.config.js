@@ -21,6 +21,7 @@ const config = {
         hot: true,
         inline: true, // autorefresh
         port: 5005, // development port server
+        proxy: { '/api/**': { target: 'http://localhost:5000', secure: false } },
     },
     module: {
         rules: [

@@ -7,22 +7,22 @@ import {
     Nav,
     NavItem,
     NavLink,
-    Container
+    Container,
 } from 'reactstrap';
 
 class AppNavBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: false
-        }
-        this.toggle = this.toggle.bind(this)
+            isOpen: false,
+        };
+        this.toggle = this.toggle.bind(this);
     }
 
     toggle() {
         this.setState({
-            isOpen: !this.state.isOpen
-        })
+            isOpen: !this.state.isOpen,
+        });
     }
 
     render() {
@@ -37,7 +37,7 @@ class AppNavBar extends Component {
                                 <NavItem>
                                     <NavLink href="http://www.bing.com">
                                         TestLink
-                            </NavLink>
+                                    </NavLink>
                                 </NavItem>
                             </Nav>
                         </Collapse>

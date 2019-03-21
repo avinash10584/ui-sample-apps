@@ -14,7 +14,6 @@
   "pre-commit": [
     "lint"
   ],
-  "proxy": "http://localhost:5000",
   "author": "Avinash",
   "license": "MIT",
   "dependencies": {
@@ -30,12 +29,14 @@
     "css-loader": "^2.1.0",
     "file-loader": "^3.0.1",
     "jquery": "^3.3.1",
+    "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-redux": "^6.0.1",
     "react-transition-group": "^2.6.0",
     "reactstrap": "^7.1.0",
     "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
     "style-loader": "^0.23.1",
     "svg-inline-loader": "^0.8.0",
     "uuid": "^3.3.2",
