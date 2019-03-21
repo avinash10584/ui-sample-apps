@@ -8,11 +8,13 @@
     "start:client": "cd client && npm start",
     "start:server-dev": "cd backend && npm run start:dev",
     "start:client-dev": "cd client && npm run start:dev",
+    "install:client": "cd client && npm install",
     "install:app": "cd client && npm install && cd ./../backend && npm install",
     "start:dev": "concurrently \"npm run start:server-dev\" \"npm run start:client-dev\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },  
-  "author": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild":  "npm run install:client && npm run build"
+  },
+  "author": "Avinash Singh",
   "license": "MIT",
   "devDependencies": {
     "babel-eslint": "^10.0.1",

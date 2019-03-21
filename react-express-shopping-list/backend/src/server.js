@@ -14,6 +14,14 @@ app.use(express.json());
 app.use('/api/items', itemsrouter);
 
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/dist'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    });
+}
+
 const appenv = process.env.NODE_ENV || 'production';
 
 console.log(`Loading environment ${appenv}`);
