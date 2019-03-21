@@ -1,3 +1,4 @@
+import * as Actions from '../actions/types';
 
 const initialState = {
     items: [],
@@ -6,23 +7,23 @@ const initialState = {
 
 export default function (state = initialState, action) {
     switch (action.type) {
-        case 'GET_ITEMS':
+        case Actions.GET_ITEMS:
             return {
                 ...state,
                 items: action.payload,
                 loading: false,
             };
-        case 'DELETE_ITEMS':
+        case Actions.DELETE_ITEMS:
             return {
                 ...state,
-                items: state.items.filter(x => x.id !== action.payload),
+                items: state.items.filter(x => x._id !== action.payload),
             };
-        case 'ADD_ITEM':
+        case Actions.ADD_ITEM:
             return {
                 ...state,
                 items: [action.payload, ...state.items],
             };
-        case 'ITEMS_LOADING':
+        case Actions.ITEMS_LOADING:
             return {
                 ...state,
                 loading: true,

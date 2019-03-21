@@ -1,8 +1,8 @@
 
-import * as types from './types';
+import * as Actions from './types';
 
 export const setItemsLoading = () => ({
-        type: types.ITEMS_LOADING,
+        type: Actions.ITEMS_LOADING,
 });
 
 
@@ -10,18 +10,24 @@ export const getItems = () => (dispatch) => {
         dispatch(setItemsLoading());
 
         fetch('/api/items')
-               .then(res => res.json())
-               .then(data => dispatch({ type: types.GET_ITEMS, payload: data }));
+        .then(res => res.json())
+        .then(data => dispatch({ type: Actions.GET_ITEMS, payload: data }));
 };
 
-export const addItems = () => ({ type: types.ADD_ITEMS });
+export const addItem = item => (dispatch) => {
+        fetch('/api/items', {
+                method: 'post',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(item),
+        })
+        .then(res => res.json())
+        .then(data => dispatch({ type: Actions.ADD_ITEM, payload: data }));
+};
 
-export const deleteItems = id => ({
-        type: types.DELETE_ITEMS,
-        payload: id,
-});
-
-export const addItem = item => ({
-        type: types.ADD_ITEMS,
-        payload: item,
-});
+export const deleteItems = id => (dispatch) => {
+        fetch(`/api/items/${id}`, {
+                method: 'delete',
+                headers: { 'Content-Type': 'application/json' },
+        })
+        .then(() => dispatch({ type: Actions.DELETE_ITEMS, payload: id }));
+};

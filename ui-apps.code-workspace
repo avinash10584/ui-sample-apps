@@ -23,6 +23,6 @@
 			"**/.settings": true,
 			"**/.factorypath": true
 		},
-		"workbench.tree.indent": 16
+		"workbench.tree.indent": 20
 	}
 }
